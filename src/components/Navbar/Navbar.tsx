@@ -3,6 +3,7 @@ import Logo from "./Logo"
 import MenuButtons from "./MenuButtons"
 import Language from "./Language"
 import SignUpButton from "./SignUpButton"
+import ResponsiveMenu from "./ResponsiveMenu"
 
 const firstMenuButtons=[
   {
@@ -16,10 +17,6 @@ const firstMenuButtons=[
     {
         title:"Resources",
         delay:2.5,
-    },
-    {
-        title:"Product",
-        delay:3,
     },
     {
         title:"Enterprise",
@@ -58,11 +55,12 @@ const Navbar = () => {
         <Logo />
         <MenuButtons menuButtons={firstMenuButtons} />
         </Stack>
-        <Stack direction={'row'} alignItems={'center'} spacing={2}>
+        <Stack direction={'row'} alignItems={'center'} spacing={2} display={{lg:"flex",md:"flex",sm:"none",xs:"none"}}>
           <Language />
           <MenuButtons menuButtons={secondMenuButtons} />
           <SignUpButton />
         </Stack>
+        <ResponsiveMenu />
     </Stack>
   )
 }

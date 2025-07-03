@@ -1,15 +1,24 @@
-import {motion} from 'motion/react'
 import image from '../../assets/Work/img.svg'
+import { Box } from '@mui/material'
 const styles={
     root:{
-        width:800,
-        height:700,
+        width:{
+          lg:800,
+          md:800,
+          sm:300,
+          xs:300
+        },
+        height:{
+          lg:700,
+          md:700,
+          sm:300,
+          xs:300
+        },
     }
 }
 const Images = () => {
   return (
-    <motion.img src={image} style={styles.root}
-    whileHover={{scale:1.3}}
+    <Box component={'img'} src={image} sx={styles.root}
     />
 
   )

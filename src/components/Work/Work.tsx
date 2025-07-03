@@ -10,7 +10,12 @@ const styles={
     details:{
         color:"rgba(65, 60, 118, 0.8)",
         fontSize:18,
-        width:"50%"
+        width:{
+            lg:"50%",
+            md:"50%",
+            sm:"100%",
+            xs:"100%"
+        }
     },
     button:{
         width:"fit-content",
@@ -23,7 +28,7 @@ const styles={
 }
 const Work = () => {
   return (
-    <Stack direction={'row'} alignItems={'center'} paddingBottom={10}>
+    <Stack direction={{lg:"row",md:"row",sm:"column",xs:"column"}} alignItems={'center'} paddingBottom={10}>
         <Stack spacing={3}>
             <Stack>
             <Typography sx={styles.textStyles}>Work together, </Typography>

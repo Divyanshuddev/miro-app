@@ -8,23 +8,54 @@ import img3 from "../../assets/HeroSection/img3.svg";
 import { motion } from "motion/react";
 const styles = {
   textStyles: {
-    fontSize: 60,
+    fontSize: {
+      lg:60,
+      md:50,
+      sm:30,
+      xs:30
+    },
     fontWeight: "bolder",
     color: "#050038",
   },
   detailStyles: {
     color: "#050038",
-    fontSize: 18,
+    fontSize: {
+      lg:18,
+      ms:18,
+      sm:13,
+      xs:13
+    },
   },
   input: {
     borderRadius: 60,
     padding: 2,
-    fontSize: 18,
+    fontSize: {
+      lg:18,
+      ms:18,
+      sm:14,
+      xs:14
+    },
+    width:{
+      lg:"100%",
+      md:"100%",
+      sm:"100%",
+      xs:"100%"
+    }
   },
   signUpButton: {
-    width: "100%",
+    width: {
+      lg:"100%",
+      md:"100%",
+      sm:"100%",
+      xs:"100%"
+    },
     padding: 1.5,
-    fontSize: 18,
+    fontSize: {
+      lg:18,
+      ms:18,
+      sm:14,
+      xs:14
+    },
     textTransform: "capitalize",
     borderRadius: 60,
   },
@@ -40,11 +71,19 @@ const styles = {
     width: 100,
     height: 50,
   },
+  collaborate:{
+    fontSize:{
+      lg:16,
+      md:16,
+      sm:14,
+      xs:14
+    }
+  }
 };
 const Details = () => {
   return (
-    <Stack spacing={3}>
-      <Stack spacing={-2}>
+    <Stack spacing={3} >
+      <Stack spacing={{lg:-2,md:-2,sm:-1,xs:-1}} alignItems={{lg:"flex-start",md:"flex-start",sm:"center",xs:"center"}}>
         <DetailWrapper delay={3}>
           <Typography sx={styles.textStyles}>Take ideas from</Typography>
         </DetailWrapper>
@@ -52,8 +91,8 @@ const Details = () => {
           <Typography sx={styles.textStyles}>better to best</Typography>
         </DetailWrapper>
       </Stack>
-      <DetailWrapper delay={4}>
-        <Typography sx={styles.detailStyles}>
+      <DetailWrapper delay={4} >
+        <Typography sx={styles.detailStyles} >
           Miro is your team's virtual platform to connect<br></br> collaborate,
           and create - together
         </Typography>
@@ -73,14 +112,14 @@ const Details = () => {
             </Button>
           </DetailWrapper>
           <DetailWrapper delay={5.5}>
-            <Typography color="gray">
+            <Typography color="gray" sx={styles.collaborate}>
               Collaborate with your team within minutes
             </Typography>
           </DetailWrapper>
         </Stack>
         <DetailWrapper delay={6}>
-          <Stack sx={styles.ratingBox} direction={"row"} alignItems={"center"}>
-            <Stack>
+          <Stack sx={styles.ratingBox} direction={{lg:"row",md:"row",sm:"column",xs:"column"}} alignItems={"center"} spacing={2}>
+            <Stack alignItems={{lg:"flex-start",md:"flex-start",sm:"center",xs:"center"}}>
               <Rating
                 name="half-rating"
                 defaultValue={5}

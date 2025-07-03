@@ -27,11 +27,21 @@ const styles={
     upperText:{
         textTransform:"uppercase",
         fontWeight:"bolder",
-        fontSize:13
+        fontSize:{
+            lg:13,
+            md:13,
+            sm:10,
+            xs:10
+        }
     },
     textStyles:{
         color:"#050038",
-        fontSize:60,
+        fontSize:{
+            lg:60,
+            md:60,
+            sm:50,
+            xs:50
+        },
         fontWeight:"bolder"
     },
     cardsStyles:{
@@ -85,7 +95,7 @@ const Collaboration = () => {
             {
                 collaborateData.map((value,index)=>{
                     return(
-                        <Grid key={index} size={4}>
+                        <Grid key={index} size={{lg:4,md:4,sm:12,xs:12}}>
                         <motion.div
                         style={styles.cardsStyles}
                         whileHover={{scale:1.2,y:-30}}

@@ -9,13 +9,35 @@ import Culture from "../Culture/Culture"
 import Teams from "../Teams/Teams"
 import Company from "../Company/Company"
 import Customers from "../Customers/Customers"
+import Footer from "../Footer/Footer"
 
 const styles={
   root:{
-    paddingLeft:20,
-    paddingRight:20,
-    paddingTop:10,
-    paddingBottom:10
+    paddingLeft:{
+      lg:20,
+      md:20,
+      sm:5,
+      xs:5
+    },
+    paddingRight:{
+      lg:20,
+      md:20,
+      sm:5,
+      xs:5
+    },
+    paddingTop:{
+      lg:10,
+      md:10,
+      sm:5,
+      xs:5
+    },
+    paddingBottom:{
+      lg:10,
+      md:10,
+      sm:5,
+      xs:5
+    },
+    boxSizing:"border-box"
   }
 }
 const Home = () => {
@@ -34,6 +56,7 @@ const Home = () => {
         </Stack>
           <Company />
           <Customers />
+          <Footer />
     </div>
   )
 }

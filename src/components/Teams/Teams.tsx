@@ -28,7 +28,12 @@ const styles = {
   },
   details: {
     color: "gray",
-    width: "60%",
+    width: {
+      lg:"60%",
+      md:"60%",
+      sm:"100%",
+      xs:"100%"
+    },
     fontSize: 18,
   },
   pointText: {
@@ -43,7 +48,7 @@ const Teams = () => {
         <Typography sx={styles.textStyles}>
           Built for the way you work
         </Typography>
-        <Stack direction={"row"} alignItems={"flex-start"}>
+        <Stack direction={{lg:"row",md:"row",sm:"column",xs:"column"}} alignItems={"flex-start"}>
           <Stack spacing={3} my={5}>
             <Typography sx={styles.subTextStyles}>Brainstorming</Typography>
             <Typography sx={styles.details}>
@@ -70,7 +75,7 @@ const Teams = () => {
         <Typography sx={styles.textStyles}>
           Built for all kinds of teams
         </Typography>
-        <Stack direction={"row"} alignItems={"flex-start"} justifyContent={'space-between'}>
+        <Stack direction={{lg:"row",md:"row",sm:"column",xs:"column"}} alignItems={"flex-start"} justifyContent={'space-between'}>
           <Stack spacing={3} my={5}>
             <Stack spacing={3} >
               <Stack direction={"row"} alignItems={"center"} spacing={4}>

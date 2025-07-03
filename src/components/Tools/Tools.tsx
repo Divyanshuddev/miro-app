@@ -8,15 +8,29 @@ const styles={
         width:700,
         height:600,
     },
+    responsiveImage:{
+        width:300,
+        height:300
+    },
     textStyles:{
-        fontSize:60,
+        fontSize:{
+            lg:60,
+            md:60,
+            sm:50,
+            xs:50
+        },
         color:"#050038",
         fontWeight:"bolder"
     },
     details:{
         color:"rgba(65, 60, 118, 0.8)",
         fontSize:18,
-        width:"70%"
+       width:{
+            lg:"70%",
+            md:"70%",
+            sm:"100%",
+            xs:"100%"
+        }
     },
     button:{
         width:"fit-content",
@@ -29,11 +43,17 @@ const styles={
 }
 const Tools = () => {
   return (
-    <Stack direction={'row'} alignItems={'center'} paddingBottom={30} >
-        <Stack>
+    <Stack direction={{lg:"row",md:"row",sm:"column",xs:"column"}} alignItems={'center'} paddingBottom={30} >
+        <Stack display={{lg:"flex",md:"flex",sm:"none",xs:"none"}}>
         <motion.img style={styles.image} src={image} 
         whileHover={{rotate:360}}
-        transition={{ delay:1,type:"spring",stiffness:150}}
+        transition={{ type:"spring",stiffness:150}}
+        />
+        </Stack>
+        <Stack display={{lg:"none",md:"none",sm:"flex",xs:"flex"}}>
+        <motion.img style={styles.responsiveImage} src={image} 
+        whileHover={{rotate:360}}
+        transition={{ type:"spring",stiffness:150}}
         />
         </Stack>
         <Stack  alignItems={'center'} justifyContent={'center'} >

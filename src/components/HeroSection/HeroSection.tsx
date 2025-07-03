@@ -4,7 +4,7 @@ import Image from "./Image"
 
 const HeroSection = () => {
   return (
-    <Stack direction={'row'} alignItems={'center'} justifyContent={'space-between'} paddingBottom={30}>
+    <Stack direction={{lg:"row",md:"row",sm:"column",xs:"column"}} alignItems={'center'} justifyContent={{lg:"space-between",md:"space-between",sm:"center",xs:"center"}} paddingBottom={30}>
         <Details />
         <Image />
     </Stack>

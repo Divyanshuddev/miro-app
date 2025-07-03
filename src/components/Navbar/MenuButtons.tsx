@@ -6,7 +6,8 @@ const styles={
         backgroundColor:"white",
         fontSize:16,
         border:"none",
-        cursor:"pointer"
+        cursor:"pointer",
+        
     }
 }
 interface MenuButtonsType{
@@ -18,7 +19,9 @@ type MenuButtonsProps={
 }
 const MenuButtons:React.FC<MenuButtonsProps> = ({menuButtons}) => {
   return (
-    <Stack direction={'row'} alignItems={'center'} spacing={3}>
+    <Stack direction={'row'} alignItems={'center'} spacing={3}
+    display={{lg:"flex",md:"flex",sm:"none",xs:"none"}}
+    >
         {
             menuButtons.map((value,index)=>{
                 return(

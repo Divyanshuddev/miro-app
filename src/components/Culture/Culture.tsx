@@ -1,9 +1,21 @@
-import { Stack } from '@mui/material'
+import { Box, Stack } from '@mui/material'
 import image from '../../assets/Culture/img.svg'
+const styles={
+  root:{
+    width:"100%",
+    height:{
+      lg:700,
+      md:700,
+      sm:200,
+      xs:200
+    },
+    objectFit:"cover"
+  }
+}
 const Culture = () => {
   return (
     <Stack paddingBottom={30}>
-      <img src={image} style={{width:"100%",height:700,objectFit:"cover"}}></img>
+      <Box component={'img'} src={image} sx={styles.root}></Box>
     </Stack>
   )
 }

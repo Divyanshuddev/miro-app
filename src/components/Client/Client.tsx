@@ -19,11 +19,11 @@ const styles = {
 const Client = () => {
   return (
     <Stack spacing={8} paddingBottom={25}>
-      <Typography alignSelf={"center"} sx={styles.textStyles} style={{marginRight:"100px"}}>
+      <Typography alignSelf={"center"} sx={styles.textStyles} >
         Trusted by 45M+ users
       </Typography>
       <Stack
-        direction={"row"}
+        direction={{lg:"row",md:"row",sm:"column",xs:"column"}}
         alignItems={"center"}
         justifyContent={"space-evenly"}
       >

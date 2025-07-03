@@ -61,7 +61,7 @@ const Company = () => {
             {
                 cardsData.map((value,index)=>{
                     return(
-                        <Grid size={4} key={index}>
+                        <Grid size={{lg:4,md:4,sm:12,xs:12}} key={index}>
                         <Stack alignItems={'center'} spacing={2}>
                             <Typography sx={styles.title}>{value.title}</Typography>
                             <Typography sx={styles.details}>{value.details}</Typography>
